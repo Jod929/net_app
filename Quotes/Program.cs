@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Quotes.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<QuotesContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("QuotesContext") ?? throw new InvalidOperationException("Connection string 'QuotesContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

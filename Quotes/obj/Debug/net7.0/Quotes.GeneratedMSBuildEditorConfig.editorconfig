@@ -32,6 +32,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/joshkrebs/c_sharp/net_app/Quotes/Views/Quotes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVvdGVzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshkrebs/c_sharp/net_app/Quotes/Views/Quotes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVvdGVzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshkrebs/c_sharp/net_app/Quotes/Views/Quotes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVvdGVzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshkrebs/c_sharp/net_app/Quotes/Views/Quotes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVvdGVzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshkrebs/c_sharp/net_app/Quotes/Views/Quotes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVvdGVzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/joshkrebs/c_sharp/net_app/Quotes/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
