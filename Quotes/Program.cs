@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Quotes.Data;
+using Quotes.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<QuotesContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("QuotesContext") ?? throw new InvalidOperationException("Connection string 'QuotesContext' not found.")));
@@ -9,6 +11,13 @@ builder.Services.AddDbContext<QuotesContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
