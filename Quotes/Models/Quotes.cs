@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Quotes.Models;
 
@@ -8,7 +10,6 @@ public class Quote
     public string? Title { get; set; }
 
     [Display(Name = "Release Date")]
-    [DataType(DataType.Date)]
     [DataType(DataType.Date)]
     public DateTime ReleaseDate { get; set; }
     public string? Genre { get; set; }

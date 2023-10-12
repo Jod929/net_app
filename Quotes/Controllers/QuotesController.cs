@@ -20,13 +20,23 @@ namespace Quotes.Controllers
         }
 
         // GET: Quotes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-              return _context.Quote != null ? 
-                          View(await _context.Quote.ToListAsync()) :
-                          Problem("Entity set 'QuotesContext.Quote'  is null.");
-        }
+            if (_context.Quote == null)
+            {
+                return Problem("Entity set 'QuotesContext.Quote'  is null.");
+            }
 
+            var quotes = from m in _context.Quote
+                        select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                quotes = quotes.Where(s => s.Title!.Contains(searchString));
+            }
+
+            return View(await quotes.ToListAsync());
+        }
         // GET: Quotes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -150,7 +160,7 @@ namespace Quotes.Controllers
             {
                 _context.Quote.Remove(quote);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
